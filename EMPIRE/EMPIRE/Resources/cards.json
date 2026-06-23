@@ -9074,7 +9074,10 @@
     "speakerImage": "char_cofounder_tachibana",
     "text": "深夜のオフィス。橘が拳を握る。「{COMPANY}は俺たちの理想から始まった。なのに最近お前、利益ばかり追ってないか?創業の魂を取り戻すか、世界を獲りにいくか。今ここで決めよう」",
     "requires": {
-      "minTurn": 5
+      "minTurn": 5,
+      "notFlags": [
+        "cofounder_gone"
+      ]
     },
     "choices": {
       "left": {
@@ -9115,6 +9118,9 @@
     "requires": {
       "flags": [
         "soul_path"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     },
     "choices": {
@@ -9166,7 +9172,8 @@
           "satisfaction": -15
         },
         "setFlags": [
-          "ken_exiled"
+          "ken_exiled",
+          "cofounder_gone"
         ],
         "nextCardId": "ep2_founder_006"
       },
@@ -9207,7 +9214,8 @@
           "money": -15
         },
         "setFlags": [
-          "founder_ousted"
+          "founder_ousted",
+          "cofounder_gone"
         ],
         "nextCardId": "ep2_founder_008"
       },
@@ -9250,7 +9258,8 @@
         },
         "setFlags": [
           "ken_exiled",
-          "clean_win"
+          "clean_win",
+          "cofounder_gone"
         ],
         "nextCardId": "ep2_founder_010"
       },
@@ -9326,6 +9335,9 @@
     "requires": {
       "flags": [
         "kept_ken"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     },
     "choices": {
@@ -9430,7 +9442,8 @@
           "money": -16
         },
         "setFlags": [
-          "founder_ousted"
+          "founder_ousted",
+          "cofounder_gone"
         ],
         "nextCardId": "ep2_founder_016"
       }
@@ -9534,6 +9547,9 @@
     "requires": {
       "flags": [
         "beg_return"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     },
     "choices": {
@@ -9640,7 +9656,8 @@
           "reputation": 8
         },
         "setFlags": [
-          "ken_exiled"
+          "ken_exiled",
+          "cofounder_gone"
         ],
         "nextCardId": "ep2_founder_015"
       }
@@ -36688,12 +36705,17 @@
           "share": 6
         },
         "setFlags": [
-          "f_cofounder_pathB_exile"
+          "f_cofounder_pathB_exile",
+          "cofounder_gone"
         ],
         "nextCardId": null
       }
     },
-    "requires": {},
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    },
     "weight": 7,
     "once": true,
     "chapterMin": 2,
@@ -36913,7 +36935,8 @@
           "share": -4
         },
         "setFlags": [
-          "f_cofounder_A_betray_sue"
+          "f_cofounder_A_betray_sue",
+          "cofounder_gone"
         ],
         "nextCardId": "arc3_cofounder_a5_lawsuit"
       },
@@ -36926,7 +36949,8 @@
           "share": -6
         },
         "setFlags": [
-          "f_cofounder_A_betray_silent"
+          "f_cofounder_A_betray_silent",
+          "cofounder_gone"
         ],
         "nextCardId": null
       }
@@ -36963,7 +36987,8 @@
           "share": 3
         },
         "setFlags": [
-          "f_cofounder_A_betray_settle"
+          "f_cofounder_A_betray_settle",
+          "cofounder_gone"
         ],
         "nextCardId": null
       },
@@ -36976,7 +37001,8 @@
           "share": -5
         },
         "setFlags": [
-          "f_cofounder_A_betray_fight"
+          "f_cofounder_A_betray_fight",
+          "cofounder_gone"
         ],
         "nextCardId": null
       }
@@ -44549,7 +44575,8 @@
         "f_hq_sold_abandon"
       ],
       "notFlags": [
-        "f_hq_kept"
+        "f_hq_kept",
+        "cofounder_gone"
       ],
       "minTurn": 10
     },
@@ -44598,7 +44625,8 @@
         "f_hq_sold_regret_open"
       ],
       "notFlags": [
-        "f_hq_sold_regret_cold"
+        "f_hq_sold_regret_cold",
+        "cofounder_gone"
       ],
       "minTurn": 11
     },
@@ -44968,7 +44996,8 @@
         "f_hq_reunion"
       ],
       "notFlags": [
-        "f_hq_no_reunion"
+        "f_hq_no_reunion",
+        "cofounder_gone"
       ],
       "minTurn": 13
     },
@@ -52021,7 +52050,8 @@
         "f_founder_return_pathA"
       ],
       "notFlags": [
-        "f_founder_return_pathB"
+        "f_founder_return_pathB",
+        "cofounder_gone"
       ],
       "minTurn": 4
     },
@@ -52212,7 +52242,8 @@
       ],
       "notFlags": [
         "f_founder_return_pathB",
-        "f_founder_return_A_yielded"
+        "f_founder_return_A_yielded",
+        "cofounder_gone"
       ],
       "minTurn": 10
     },
@@ -52537,7 +52568,8 @@
         "f_founder_return_B_reconcile"
       ],
       "notFlags": [
-        "f_founder_return_pathA"
+        "f_founder_return_pathA",
+        "cofounder_gone"
       ],
       "minTurn": 10
     },
@@ -57120,7 +57152,11 @@
     },
     "weight": 8,
     "once": true,
-    "requires": {},
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    },
     "chapterMin": 2,
     "chapterMax": 6
   },
@@ -57619,7 +57655,8 @@
         "f4_equity_glory"
       ],
       "notFlags": [
-        "f4_equity_pathB"
+        "f4_equity_pathB",
+        "cofounder_gone"
       ],
       "minTurn": 12
     },
@@ -76292,7 +76329,11 @@
     "text": "「俺がいなきゃ、この会社は存在しなかった。だから正式に——株と肩書き、約束してほしい。口約束でいい、今は」",
     "weight": 7,
     "once": true,
-    "requires": {},
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    },
     "choices": {
       "left": {
         "label": "「わかった、いずれ必ずそうする」と約束する",
@@ -76338,7 +76379,8 @@
         "f5_cofounder_promise_routeA"
       ],
       "notFlags": [
-        "f5_cofounder_promise_routeB"
+        "f5_cofounder_promise_routeB",
+        "cofounder_gone"
       ],
       "minTurn": 5
     },
@@ -76438,7 +76480,8 @@
         "f5_cofounder_promise_A_delay"
       ],
       "notFlags": [
-        "f5_cofounder_promise_routeB"
+        "f5_cofounder_promise_routeB",
+        "cofounder_gone"
       ],
       "minTurn": 8
     },
@@ -76689,7 +76732,8 @@
         "f5_cofounder_promise_A_split"
       ],
       "notFlags": [
-        "f5_cofounder_promise_routeB"
+        "f5_cofounder_promise_routeB",
+        "cofounder_gone"
       ],
       "minTurn": 12
     },
@@ -76740,7 +76784,8 @@
       ],
       "notFlags": [
         "f5_cofounder_promise_routeB",
-        "f5_cofounder_promise_A_split"
+        "f5_cofounder_promise_A_split",
+        "cofounder_gone"
       ],
       "minTurn": 15
     },
@@ -81868,7 +81913,11 @@
     },
     "weight": 6,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1_02",
@@ -81905,7 +81954,11 @@
     },
     "weight": 7,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1_03",
@@ -82016,6 +82069,9 @@
     "requires": {
       "flags": [
         "ch1_mvp_released"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -82054,7 +82110,11 @@
     },
     "weight": 6,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1_07",
@@ -82238,6 +82298,9 @@
     "requires": {
       "flags": [
         "ch1_first_client"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -82347,7 +82410,11 @@
     },
     "weight": 7,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1_15",
@@ -82415,7 +82482,11 @@
     },
     "weight": 5,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1_17",
@@ -82457,7 +82528,11 @@
     },
     "weight": 11,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1_18",
@@ -82491,7 +82566,8 @@
         },
         "nextCardId": null,
         "setFlags": [
-          "saga_cofounder_left"
+          "saga_cofounder_left",
+          "cofounder_gone"
         ]
       }
     },
@@ -82500,6 +82576,9 @@
     "requires": {
       "flags": [
         "ch1_founding_vision_set"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -83196,7 +83275,11 @@
     },
     "weight": 12,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch2_19",
@@ -84782,6 +84865,9 @@
     "requires": {
       "flags": [
         "saga_cofounder_kept"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -86922,7 +87008,11 @@
     },
     "weight": 7,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1b_02",
@@ -86996,7 +87086,11 @@
     },
     "weight": 7,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1b_04",
@@ -87107,7 +87201,11 @@
     },
     "weight": 6,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1b_07",
@@ -87144,6 +87242,9 @@
     "requires": {
       "flags": [
         "ch1b_price_lowered"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -87352,7 +87453,11 @@
     },
     "weight": 5,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1b_14",
@@ -87386,7 +87491,11 @@
     },
     "weight": 5,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1b_15",
@@ -87426,6 +87535,9 @@
     "requires": {
       "flags": [
         "saga_route_cafe"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -87467,6 +87579,9 @@
     "requires": {
       "flags": [
         "saga_route_machine"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -87549,6 +87664,9 @@
     "requires": {
       "flags": [
         "saga_route_hardware"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -87668,7 +87786,11 @@
     },
     "weight": 7,
     "once": true,
-    "requires": {}
+    "requires": {
+      "notFlags": [
+        "cofounder_gone"
+      ]
+    }
   },
   {
     "id": "ch1b_22",
@@ -87705,6 +87827,9 @@
     "requires": {
       "flags": [
         "ch1b_speed_culture"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -87855,6 +87980,9 @@
     "requires": {
       "flags": [
         "ch1b_introduced_biz"
+      ],
+      "notFlags": [
+        "cofounder_gone"
       ]
     }
   },
@@ -88840,7 +88968,8 @@
           "share": 3
         },
         "setFlags": [
-          "ch3b_founder_left"
+          "ch3b_founder_left",
+          "cofounder_gone"
         ],
         "nextCardId": null
       }

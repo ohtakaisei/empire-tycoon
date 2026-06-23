@@ -1,0 +1,266 @@
+[
+  {
+    "id": "victory_cold_emperor",
+    "kind": "victory",
+    "title": "冷徹なる帝王",
+    "text": "{社名}の株価は天井を突き破り、君はまだ玉座にいる。友を切り、信念を売り、数字だけを神とした。歴史は勝者に優しい——だが鏡の中の男の目は、とうの昔に光を失っていた。",
+    "art": "crown",
+    "minChapter": 6,
+    "requiresFlags": [
+      "saga_profit_first",
+      "saga_chose_ipo",
+      "saga_eternal_reign"
+    ],
+    "priority": 10
+  },
+  {
+    "id": "victory_silent_sage",
+    "kind": "victory",
+    "title": "徳望の創業者、静かに去る",
+    "text": "後継者の肩を叩き、君は{社名}を離れた。資本より使命を選んだ日々は、数千人の暮らしを変えた。株主ではなく社会が、あなたの通夜で泣いた。",
+    "art": "trophy",
+    "minChapter": 6,
+    "requiresFlags": [
+      "saga_mission_first",
+      "saga_stay_private",
+      "saga_heir"
+    ],
+    "priority": 10
+  },
+  {
+    "id": "victory_global_gambler",
+    "kind": "victory",
+    "title": "世界に売り抜けた勝負師",
+    "text": "ニューヨークの弁護士事務所で契約書に署名した瞬間、{社名}はグローバルコングロマリットの一部となった。君は翌日からただの億万長者だ。それで十分だった。",
+    "art": "money",
+    "minChapter": 6,
+    "requiresFlags": [
+      "saga_went_global",
+      "saga_diversified",
+      "saga_sellout"
+    ],
+    "priority": 9
+  },
+  {
+    "id": "victory_bootstrap_legend",
+    "kind": "victory",
+    "title": "借りを作らなかった男",
+    "text": "VCの電話を切り続けて十年。{社名}は誰の指図も受けない。上場もしない。ただ、黒字だ。経済誌は「時代遅れ」と書いたが、君はその号をトイレに飾った。",
+    "art": "trophy",
+    "minChapter": 6,
+    "requiresFlags": [
+      "saga_bootstrap",
+      "saga_stay_private",
+      "saga_focused"
+    ],
+    "priority": 9
+  },
+  {
+    "id": "victory_clean_ipo",
+    "kind": "victory",
+    "title": "誠実な上場",
+    "text": "上場初日、{社名}の株は静かに、しかし確実に上昇した。派手な祭りはない。ただ、嘘をつかなかった十年分の信用が、市場に値段をつけた。君は泣かなかったが、CFOは泣いた。",
+    "art": "party",
+    "minChapter": 6,
+    "requiresFlags": [
+      "saga_clean",
+      "saga_chose_ipo",
+      "saga_cofounder_kept"
+    ],
+    "priority": 8
+  },
+  {
+    "id": "victory_pivot_king",
+    "kind": "victory",
+    "title": "転身の覇者",
+    "text": "最初のビジネスモデルは跡形もない。あの夜の決断——方向転換——が全てを変えた。{社名}という名前だけが残り、中身は三度生まれ変わった。それが経営というものだ。",
+    "art": "crown",
+    "minChapter": 6,
+    "requiresFlags": [
+      "saga_pivoted",
+      "saga_vc_money",
+      "saga_fast_growth"
+    ],
+    "priority": 8
+  },
+  {
+    "id": "victory_domestic_deep",
+    "kind": "victory",
+    "title": "この国に根を張る",
+    "text": "海外進出の誘惑を断ち、{社名}は日本の土に深く根を下ろした。グローバル企業が撤退した地方都市に、君の営業所だけが残っている。それが君の帝国だった。",
+    "art": "trophy",
+    "minChapter": 6,
+    "requiresFlags": [
+      "saga_stay_domestic",
+      "saga_steady_growth",
+      "saga_heir"
+    ],
+    "priority": 7
+  },
+  {
+    "id": "victory_eternal_maverick",
+    "kind": "victory",
+    "title": "永遠の異端経営者",
+    "text": "規律も自由も、上場も売却も拒んだ。{社名}はいつも「よくわからない会社」だったが、気づけば業界で最も長く生き残っていた。君はまだ、椅子から立つつもりがない。",
+    "art": "crown",
+    "minChapter": 6,
+    "requiresFlags": [
+      "saga_culture_free",
+      "saga_eternal_reign"
+    ],
+    "priority": 6
+  },
+  {
+    "id": "victory_generic",
+    "kind": "victory",
+    "title": "帝国の完成",
+    "text": "創業の日に誓った言葉を、君はかろうじて守り抜いた。{社名}は今日も動いている。それだけで十分だと、やっと思えるようになった。",
+    "art": "party",
+    "minChapter": 6,
+    "requiresFlags": [],
+    "priority": 1
+  },
+  {
+    "id": "failure_seed_burnout",
+    "kind": "failure",
+    "title": "資金の夜明け前",
+    "text": "シード調達に失敗し、口座残高がゼロになった朝、君は共同創業者に連絡できなかった。{社名}は登記から18ヶ月で解散した。アイデアは正しかった——ただ、金が尽きた。",
+    "art": "bankruptcy",
+    "failParam": "money",
+    "minChapter": 2,
+    "requiresFlags": [],
+    "priority": 6
+  },
+  {
+    "id": "failure_cofounder_exodus",
+    "kind": "failure",
+    "title": "共同創業者の離反",
+    "text": "利益を巡る対立が頂点に達した日、共同創業者は株主を連れて去った。{社名}の取締役会は一夜にして君の敵になった。経営権を失い、自ら創った会社を追われた。",
+    "art": "exodus",
+    "failParam": "satisfaction",
+    "minChapter": 2,
+    "requiresFlags": [
+      "saga_profit_first",
+      "saga_cofounder_kept"
+    ],
+    "priority": 8
+  },
+  {
+    "id": "failure_culture_collapse",
+    "kind": "failure",
+    "title": "文化の崩壊",
+    "text": "急拡大の歪みは社内から噴き出た。自由すぎた文化は規律を失い、優秀な人材から順に退職届を出した。{社名}に残ったのは、空のオフィスと未払いの給与だった。",
+    "art": "exodus",
+    "failParam": "satisfaction",
+    "minChapter": 3,
+    "requiresFlags": [
+      "saga_fast_growth",
+      "saga_culture_free"
+    ],
+    "priority": 9
+  },
+  {
+    "id": "failure_global_overreach",
+    "kind": "failure",
+    "title": "海外進出という賭けの敗北",
+    "text": "三カ国同時展開のキャッシュフローは誰も制御できなかった。{社名}の海外子会社が次々と倒れ、本体を道連れにした。地図を広げすぎた帝国は、内側から崩れた。",
+    "art": "bankruptcy",
+    "failParam": "money",
+    "minChapter": 4,
+    "requiresFlags": [
+      "saga_went_global",
+      "saga_diversified"
+    ],
+    "priority": 9
+  },
+  {
+    "id": "failure_market_obsolete",
+    "kind": "failure",
+    "title": "時代に置き去られた王者",
+    "text": "初志貫徹を誇りにしていた君は、市場の変化を「ノイズ」と呼んだ。競合が次世代サービスを出した頃、{社名}のシェアはすでに消えていた。信念と固執の境界を、誰も教えてくれなかった。",
+    "art": "obsolete",
+    "failParam": "share",
+    "minChapter": 4,
+    "requiresFlags": [
+      "saga_stayed_course",
+      "saga_stay_domestic"
+    ],
+    "priority": 8
+  },
+  {
+    "id": "failure_shady_scandal",
+    "kind": "failure",
+    "title": "灰色の清算",
+    "text": "上場直前、週刊誌が一本の記事を出した。粉飾とは言えない数字の操作が、しかし致命的だった。{社名}の株式公開は永久に取り消され、君は証人台に立つことになった。",
+    "art": "gavel",
+    "failParam": "reputation",
+    "minChapter": 5,
+    "requiresFlags": [
+      "saga_shady",
+      "saga_chose_ipo"
+    ],
+    "priority": 10
+  },
+  {
+    "id": "failure_ipo_bubble",
+    "kind": "failure",
+    "title": "上場の翌日",
+    "text": "鳴り物入りで上場した{社名}は、初値から三日で半値になった。機関投資家の売りが止まらない。君は会見室で笑顔を作ったが、誰も笑い返さなかった。市場は正直だ。",
+    "art": "fire",
+    "failParam": "reputation",
+    "minChapter": 5,
+    "requiresFlags": [
+      "saga_chose_ipo",
+      "saga_fast_growth"
+    ],
+    "priority": 7
+  },
+  {
+    "id": "end_cafe_empire",
+    "kind": "victory",
+    "title": "一杯から始まった帝国",
+    "art": "crown",
+    "minChapter": 6,
+    "priority": 6,
+    "requiresFlags": [
+      "saga_route_cafe"
+    ],
+    "text": "あの日、窓際で見た一杯のコーヒー。{社名}は今や世界中の街角に灯をともすカフェ帝国となった。原点の香りは、今も変わらない。"
+  },
+  {
+    "id": "end_machine_empire",
+    "kind": "victory",
+    "title": "全自動の覇者",
+    "art": "crown",
+    "minChapter": 6,
+    "priority": 6,
+    "requiresFlags": [
+      "saga_route_machine"
+    ],
+    "text": "一台の試作機から始まった執念。{社名}の抽出技術は世界標準となり、あらゆる厨房があなたの機械で動いている。"
+  },
+  {
+    "id": "end_app_titan",
+    "kind": "victory",
+    "title": "指先の帝国",
+    "art": "crown",
+    "minChapter": 6,
+    "priority": 6,
+    "requiresFlags": [
+      "saga_route_app"
+    ],
+    "text": "通りすがりに見たスマホの横顔。あれから幾年、{社名}のアプリは数億の指先に宿り、人々の毎日そのものになった。"
+  },
+  {
+    "id": "end_hardware_maker",
+    "kind": "victory",
+    "title": "ものづくりの巨人",
+    "art": "crown",
+    "minChapter": 6,
+    "priority": 6,
+    "requiresFlags": [
+      "saga_route_hardware"
+    ],
+    "text": "自分たちの手で世界に触れたい——その一念で始めた{社名}は、いまや誰もが手にするデバイスを生む、ものづくりの巨人となった。"
+  }
+]

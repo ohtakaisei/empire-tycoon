@@ -1,0 +1,20 @@
+# Build artifacts
+EMPIRE/build/
+build/
+DerivedData/
+*.xcuserstate
+**/xcuserdata/
+*.xcscmblueprint
+
+# macOS / AppleDouble
+.DS_Store
+._*
+**/._*
+
+# Internal design docs (not for public repo)
+docs/*.docx
+docs/*.pdf
+
+# Misc
+*.log
+/tmp/

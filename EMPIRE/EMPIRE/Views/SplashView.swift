@@ -36,8 +36,8 @@ struct SplashView: View {
             VStack(spacing: 22) {
                 Spacer()
 
-                CrownEmblem()
-                    .frame(width: 168, height: 168)
+                BrandEmblem()
+                    .frame(width: 176, height: 176)
                     .shadow(color: Pal.gold.opacity(glow ? 0.55 : 0.2), radius: glow ? 26 : 10)
                     .scaleEffect(emblemIn ? 1 : 0.86)
                     .opacity(emblemIn ? 1 : 0)

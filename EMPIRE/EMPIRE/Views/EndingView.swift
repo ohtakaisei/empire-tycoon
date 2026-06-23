@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import StoreKit
 
 /// ゲームオーバー／引退の結末画面。
 struct EndingView: View {
@@ -9,8 +10,13 @@ struct EndingView: View {
     let onRestart: () -> Void
 
     @Environment(\.modelContext) private var context
+    @Environment(\.requestReview) private var requestReview
     @Query(sort: \RunRecord.survivedTurns, order: .reverse) private var records: [RunRecord]
     @State private var appeared = false
+
+    // レビュー依頼の制御（ある程度遊んだ人に、良い瞬間で一度だけ）。
+    @AppStorage("completedRuns") private var completedRuns = 0
+    @AppStorage("didRequestReview") private var didRequestReview = false
 
     private var best: Int { records.first?.survivedTurns ?? turns }
 
@@ -73,9 +79,11 @@ struct EndingView: View {
         }
         .onAppear {
             saveRecord()
+            completedRuns += 1
             withAnimation(.spring(response: 0.5, dampingFraction: 0.6).delay(0.1)) {
                 appeared = true
             }
+            maybeRequestReview()
         }
     }
 
@@ -87,6 +95,17 @@ struct EndingView: View {
             Text(label)
                 .font(.system(size: 11, weight: .medium))
                 .foregroundStyle(.white.opacity(0.6))
+        }
+    }
+
+    /// ある程度プレイし、かつ良い瞬間（栄光の結末 or 数回プレイ後）に一度だけレビュー依頼。
+    /// 実際の表示頻度は StoreKit 側で年3回までに自動制限される。
+    private func maybeRequestReview() {
+        guard !didRequestReview else { return }
+        guard ending.isGlory || completedRuns >= 3 else { return }
+        didRequestReview = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.4) {
+            requestReview()
         }
     }
 
